@@ -12,7 +12,7 @@
 <br></br>
 
 ## ⚓클러스터 구성도
-![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/566f6c05-5cf6-4bc4-b253-9626489aec98)
+![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/bed6e64d-0173-4eb2-9e7e-f6159c0de7ff)
 <br></br>
 
 ## ⚓도커 이미지 및 도커 허브 링크
