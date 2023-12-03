@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc-frontend
+spec:
+  selector:
+    app: sc-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3300
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sc-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sc-frontend
+  template:
+    metadata:
+      labels:
+        app: sc-frontend
+    spec:
+      containers:
+      - name: sc-frontend
+        image: youjung819/sc_frontend:1.0
+        ports:
+        - containerPort: 3300
