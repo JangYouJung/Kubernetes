@@ -1,0 +1,27 @@
+# pv
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mariadb-pv # pv 이름
+spec:
+  #storageClassName: mariadb-storage-class
+  capacity:
+    storage: 2Gi # 스토리지 용량 크기
+  accessModes:
+    - ReadWriteOnce # 하나의 Pod에서만 access가 가능하도록 설정, ReadWriteMany>는 여러 개 노드에서 접근 가능
+  hostPath:
+    path: "/data/k8s/db/" # node에 저장될 스토리지 공간                                                                       
+---
+
+#pvc
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mariadb-pvc # pvc 이름
+spec:
+  #storageClassName: mariadb-storage-class
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
