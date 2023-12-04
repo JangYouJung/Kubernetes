@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: sc-frontend
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "websocket"
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "wss"
 spec:
   selector:
     app: sc-frontend
