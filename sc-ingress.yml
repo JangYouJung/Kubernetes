@@ -9,16 +9,16 @@ spec:
     - http:
         paths:
           - path: /
-            pathType: Prefix
+            pathType: Prefix       
             backend:
               service:
-                name: sc-frontend-service
-                port:
+                name: sc-frontend
+                port: 
                   number: 80
           - path: /api
-            pathType: Prefix
+            pathType: Prefix       
             backend:
               service:
-                name: sc-backend-service
-                port:
+                name: sc-backend
+                port: 
                   number: 8080
