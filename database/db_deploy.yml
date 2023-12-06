@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mariadb-deployment
+  name: sc-database
 spec:
   replicas: 1
   selector:
@@ -15,25 +15,25 @@ spec:
         app: mariadb
     spec:
       containers:
-      - name: mariadb
-        image: mariadb:latest
-        envFrom:
-        - secretRef:
-            name: mariadb-secret
-        ports:
-        - containerPort: 3306
-        volumeMounts:
-        - name: mariadb-storage
-          mountPath: /var/lib/mysql
-        - name: mariadb-config
-          mountPath: /docker-entrypoint-initdb.d
+        - name: mariadb
+          image: mariadb:latest
+          envFrom:
+            - secretRef:
+                name: mariadb-secret
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - name: mariadb-storage
+              mountPath: /var/lib/mysql
+            - name: mariadb-config
+              mountPath: /docker-entrypoint-initdb.d
       volumes:
-      - name: mariadb-storage
-        persistentVolumeClaim:
-          claimName: mariadb-pvc
-      - name: mariadb-config
-        configMap:
-          name: mariadb-configmap
+        - name: mariadb-storage
+          persistentVolumeClaim:
+            claimName: mariadb-pvc
+        - name: mariadb-config
+          configMap:
+            name: mariadb-configmap
 ---
 # service.yaml
 
