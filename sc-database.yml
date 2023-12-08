@@ -31,7 +31,7 @@ spec:                       ## 표2 스테이트풀셋 사양
     spec:
       containers:           
       - name: mysql
-        image: youjung819/sc_database:2.0    ## Docker Hub MySQL 리포지터리 지정
+        image: youjung819/sc_database:3.0    ## Docker Hub MySQL 리포지터리 지정
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: qwerty

@@ -3,22 +3,25 @@ kind: Ingress
 metadata:
   name: sc-ingress
   annotations:
-    kubernetes.io/ingress.class: nginx
+    #kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/websocket-services: sc-backend-service:8080
 spec:
+  ingressClassName: nginx
   rules:
-    - http:
+    - host: sc-chatting.com
+      http:
         paths:
-          - path: /
-            pathType: Prefix       
+          - path: "/api"
+            pathType: Prefix
             backend:
               service:
-                name: sc-frontend
-                port: 
+                name: sc-backend-service
+                port:
+                  number: 5000
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: sc-frontend-service
+                port:
                   number: 80
-          - path: /api
-            pathType: Prefix       
-            backend:
-              service:
-                name: sc-backend
-                port: 
-                  number: 8080
