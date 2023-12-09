@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc-backend-service
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "websocket"
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "wss"
+spec:
+  selector:
+    app: sc-backend
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 3300
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sc-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sc-backend
+  template:
+    metadata:
+      labels:
+        app: sc-backend
+    spec:
+      containers:
+        - name: sc-backend
+          image: youjung819/sc_backend:6.0
+          imagePullPolicy: Always
+            #command: ["sh", "-c", "sleep 3600"]
+          ports:
+            - containerPort: 3300
