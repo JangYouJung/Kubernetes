@@ -11,18 +11,34 @@
 #### 🧑‍💻서비스 개발자: [안세현 Github Profile](https://github.com/ash0814)
 <br></br>
 
+
 ## ⚓클러스터 구성도
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/bed6e64d-0173-4eb2-9e7e-f6159c0de7ff)
 <br></br>
+
 
 ## ⚓도커 이미지 및 도커 허브 링크
 * [youjung819/sc_database](https://hub.docker.com/repository/docker/youjung819/sc_database/general)
 * [youjung819/sc_frontend](https://hub.docker.com/repository/docker/youjung819/sc_frontend/general)
 * [youjung819/sc_backend](https://hub.docker.com/repository/docker/youjung819/sc_backend/general)
+  
 <br></br>
 
+
+
+## ⚓ 진행 상황
+|차수|날짜|수행 과제| 회고록 링크 |
+|:-------:|:---------:|:----------------------------------|:-------------:|
+|1차|12/01|프로젝트 개요 및 초기 세팅| [🔗1주차 회고록 링크](https://yuejeong.tistory.com/47) |
+|2차|12/04|각 오브젝트 매니페스트 파일 작성 및 DB 초기 설정| [🔗2주차 회고록 링크](https://yuejeong.tistory.com/49?category=683948) |
+|3차|12/09|인그레스를 통한 백엔드 ↔️ 프론트엔드 통신 성공|[🔗3주차 회고록 링크](https://yuejeong.tistory.com/52)|
+
+<br></br>
+
+
 ## ⚓매니페스트 파일 목록
-### Frontend
+
+#### Frontend
 |오브젝트|파일명|완료 여부|
 |:---|---------|:---------:|
 |Deployment|sc-frontend.yaml|o|
@@ -33,22 +49,22 @@
 ### Backend
 |오브젝트|파일명|완료 여부|
 |:---|---------|:---------:|
-|Deployment|sc-backend.yaml|o|
-|Service|sc-backend.yaml|o|
+|Deployment|sc-backend2.yml|o|
+|Service|sc-backend2.yml|o|
 
 <br></br>
 
 ### Database
 |오브젝트|파일명|완료 여부|
 |:---|---------|:---------:|
-|Statefulset|||
-|Service|||
-|PersistentVolume|||
-|Secret|||
+|Statefulset|sc-datatbase.yml|o|
+|Service|sc-datatbase.yml|o|
+|PersistentVolume|sc-datatbase.yml|o|
+|Secret||x|
 
 <br></br>
 
 ### Ingress
 |오브젝트|파일명|완료 여부|
 |:---|---------|:---------:|
-|Ingress|||
+|Ingress|sc-ingress.yml|o|
