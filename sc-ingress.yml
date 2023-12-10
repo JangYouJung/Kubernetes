@@ -18,6 +18,13 @@ spec:
                 name: sc-backend-service
                 port:
                   number: 5000
+          - path: "/socket.io"
+            pathType: Prefix
+            backend:
+              service:
+                name: sc-backend-service
+                port:
+                  number: 5000
           - path: "/"
             pathType: Prefix
             backend:

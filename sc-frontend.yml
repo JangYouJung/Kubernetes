@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
         - name: sc-frontend
-          image: youjung819/sc_frontend:6.4
+          image: youjung819/sc_frontend:8.0
           ports:
             - containerPort: 8080
