@@ -7,8 +7,12 @@
 ## ⚓배포할 서비스 설명 및 Github
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/d5f3c607-a055-4a77-a488-2edf3e5b5b99)
 
-#### 🔗배포할 서비스 Source: [SC-Chatting Github](https://github.com/ash0814/sc_chatting)
-#### 🧑‍💻서비스 개발자: [안세현 Github Profile](https://github.com/ash0814)
+## 🔗배포할 서비스 Source
+ 🔹Backend: [깃허브 링크](https://github.com/ash0814/SC_backend)
+
+ 🔹Frontend: [깃허브 링크](https://github.com/ash0814/SC_frontend)
+
+### 🧑‍💻서비스 개발자: [안세현 Github Profile](https://github.com/ash0814)
 <br></br>
 
 
