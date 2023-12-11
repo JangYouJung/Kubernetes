@@ -4,7 +4,7 @@ metadata:
   name: sc-ingress
   annotations:
     #kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/websocket-services: sc-backend-service:8080
+    nginx.ingress.kubernetes.io/websocket-services: sc-backend-service:5000
 spec:
   ingressClassName: nginx
   rules:
