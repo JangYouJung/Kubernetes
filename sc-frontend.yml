@@ -18,7 +18,7 @@ kind: Deployment
 metadata:
   name: sc-frontend
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: sc-frontend
@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
         - name: sc-frontend
-          image: youjung819/sc_frontend:8.7
+          image: youjung819/sc_frontend:9.1
           ports:
             - containerPort: 8080

@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: sc-chatting.com
+    - host: sc-chatting.ddns.net
       http:
         paths:
           - path: "/api"
