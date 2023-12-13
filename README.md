@@ -1,30 +1,38 @@
 # Kubernetes
 ## ⚓도커와 쿠버네티스로 웹서비스 배포하기 프로젝트
-- 2023 클라우드 컴퓨팅 1팀 프로젝트
+- 23-2학기 성신여대 클라우드 컴퓨팅 1팀 프로젝트
 - 팀원: 안세현, 장유정
 <br></br>
 
-## ⚓배포할 서비스 설명 및 Github
+## [⚓SC통신 사이트 접속하기](http://sc-chatting.ddns.net)
+![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/7a7aed5d-7165-46c0-9d32-22623128b1ce)
+![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/d8852402-031a-4416-8275-270aa58541d7)
+### ⚠️배포가 중단 됐다면 ➡️ SC통신 직접 구축해보기: [실행 매뉴얼📜](https://drive.google.com/file/d/1qPKnyy-ZMtK7Qay4Q8IH0JfN9ToSgiA3/view?usp=sharing)
+<br></br>
+
+## ⚓배포할 서비스 설명
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/d5f3c607-a055-4a77-a488-2edf3e5b5b99)
+<br></br>
 
 ## 🔗배포할 서비스 Source
- 🔹Backend: [깃허브 링크](https://github.com/ash0814/SC_backend)
-
- 🔹Frontend: [깃허브 링크](https://github.com/ash0814/SC_frontend)
-
+ ### 💬Backend: [github.com/ash0814/SC_backend](https://github.com/ash0814/SC_backend)
+ ### 💬Frontend: [github.com/ash0814/SC_frontend](https://github.com/ash0814/SC_frontend)
 ### 🧑‍💻서비스 개발자: [안세현 Github Profile](https://github.com/ash0814)
 <br></br>
 
 
 ## ⚓클러스터 구성도
-![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/bed6e64d-0173-4eb2-9e7e-f6159c0de7ff)
+![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/9ad6be51-1b65-4346-85e4-b39e72fc970d)
 <br></br>
 
+## ⚓ SC통신 Ingress 통신 원리
+![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/e07a37a4-f667-4f9e-8b81-361b0528021d)
+<br></br>
 
 ## ⚓도커 이미지 및 도커 허브 링크
-* [youjung819/sc_database](https://hub.docker.com/repository/docker/youjung819/sc_database/general)
-* [youjung819/sc_frontend](https://hub.docker.com/repository/docker/youjung819/sc_frontend/general)
-* [youjung819/sc_backend](https://hub.docker.com/repository/docker/youjung819/sc_backend/general)
+### 🐋Database: [youjung819/sc_database](https://hub.docker.com/repository/docker/youjung819/sc_database/general)
+### 🐋Frontend: [youjung819/sc_frontend](https://hub.docker.com/repository/docker/youjung819/sc_frontend/general)
+### 🐋Backend: [youjung819/sc_backend](https://hub.docker.com/repository/docker/youjung819/sc_backend/general)
   
 <br></br>
 
