@@ -46,16 +46,16 @@
 #### Frontend
 |오브젝트|파일명|완료 여부|
 |:---|---------|:---------:|
-|Deployment|sc-frontend.yaml|o|
-|Service|sc-frontend.yaml|o|
+|Deployment|sc-frontend.yml|o|
+|Service|sc-frontend.yml|o|
 
 <br></br>
 
 ### Backend
 |오브젝트|파일명|완료 여부|
 |:---|---------|:---------:|
-|Deployment|sc-backend2.yml|o|
-|Service|sc-backend2.yml|o|
+|Deployment|sc-backend.yml|o|
+|Service|sc-backend.yml|o|
 
 <br></br>
 
