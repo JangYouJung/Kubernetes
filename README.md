@@ -1,4 +1,4 @@
-# ⚓ Kubernetes | 도커와 쿠버네티스로 웹서비스 배포하기 프로젝트
+# ⚓ Kubernetes | 쿠버네티스로 웹서비스 배포하기 프로젝트
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/7a7aed5d-7165-46c0-9d32-22623128b1ce)
 ### 23-2학기 성신여대 클라우드 컴퓨팅 1팀 프로젝트: 안세현, 장유정
 <br></br>
