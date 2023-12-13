@@ -1,11 +1,9 @@
-# Kubernetes
-## ⚓도커와 쿠버네티스로 웹서비스 배포하기 프로젝트
-- 23-2학기 성신여대 클라우드 컴퓨팅 1팀 프로젝트
-- 팀원: 안세현, 장유정
+# ⚓ Kubernetes | 도커와 쿠버네티스로 웹서비스 배포하기 프로젝트
+![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/7a7aed5d-7165-46c0-9d32-22623128b1ce)
+### 23-2학기 성신여대 클라우드 컴퓨팅 1팀 프로젝트: 안세현, 장유정
 <br></br>
 
 ## [⚓SC통신 사이트 접속하기](http://sc-chatting.ddns.net)
-![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/7a7aed5d-7165-46c0-9d32-22623128b1ce)
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/d8852402-031a-4416-8275-270aa58541d7)
 ### ⚠️배포가 중단 됐다면 ➡️ SC통신 직접 구축해보기: [실행 매뉴얼📜](https://drive.google.com/file/d/1qPKnyy-ZMtK7Qay4Q8IH0JfN9ToSgiA3/view?usp=sharing)
 <br></br>
@@ -21,7 +19,7 @@
 <br></br>
 
 
-## ⚓클러스터 구성도
+## ⚓ SC통신 클러스터 구성도
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/9ad6be51-1b65-4346-85e4-b39e72fc970d)
 <br></br>
 
@@ -51,7 +49,7 @@
 
 ## ⚓매니페스트 파일 목록
 
-#### Frontend
+### Frontend
 |오브젝트|파일명|완료 여부|
 |:---|---------|:---------:|
 |Deployment|sc-frontend.yml|o|
