@@ -4,7 +4,7 @@ metadata:
   name: sc-backend-service
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "websocket"
-    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "wss"
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "ws"
 spec:
   selector:
     app: sc-backend
@@ -18,7 +18,7 @@ kind: Deployment
 metadata:
   name: sc-backend
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: sc-backend

@@ -4,7 +4,7 @@ metadata:
   name: sc-frontend-service
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "websocket"
-    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "wss"
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "ws"
 spec:
   selector:
     app: sc-frontend
@@ -18,7 +18,7 @@ kind: Deployment
 metadata:
   name: sc-frontend
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: sc-frontend
@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
         - name: sc-frontend
-          image: youjung819/sc_frontend:9.1
+          image: youjung819/sc_frontend:9.0
           ports:
             - containerPort: 8080
