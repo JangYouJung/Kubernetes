@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: sc-frontend-service
+  name: sc-frontend-service     #프론트엔드 서비스의 도메인 네임
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "websocket"
     service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "ws"
@@ -10,15 +10,15 @@ spec:
     app: sc-frontend
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 80                  # 프론트엔드 서비스의 포트 번호 80
+      targetPort: 8080          # 프론트엔드 파드의  포트 번호 8080
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sc-frontend
 spec:
-  replicas: 1
+  replicas: 1                   # 웹소켓 오류 문제로 파드는 하나로 배포
   selector:
     matchLabels:
       app: sc-frontend
@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
         - name: sc-frontend
-          image: youjung819/sc_frontend:9.0
+          image: youjung819/sc_frontend:9.0     # 도커허브에서 가져오는 컨테이너 이미지
           ports:
-            - containerPort: 8080
+            - containerPort: 8080               # 서비스의 TargetPort와 containerPort 동일하게 8080

@@ -6,21 +6,20 @@ metadata:
     app: db-statefulset
 spec:
   ports:
-  - port: 3306
+  - port: 3306                     
     name: sc-database-service
-  clusterIP: None    ## 헤드리스 서비스 설정
+  clusterIP: None                  ## 헤드리스 서비스 설정
   selector:
-    app: db-statefulset   ## 후술하는 스테이트풀셋과 연결시키는 라벨
+    app: db-statefulset            ## 스테이트풀셋과 연결시키는 라벨
 ---
-## MySQL 스테이트풀셋
-#
+
 apiVersion: apps/v1       
 kind: StatefulSet
 metadata:
   name: sc-database
 spec:                       
   serviceName: sc-database-service    
-  replicas: 1               ## 파드 기동 개수
+  replicas: 1                       ## 파드 기동 개수
   selector:
     matchLabels:
       app: db-statefulset
@@ -45,20 +44,18 @@ spec:
         - name: pvc
           mountPath: /var/lib/mysql
           subPath: data     
-        livenessProbe:      ## MySQL 기동 확인 
+        livenessProbe:                ## MySQL 기동 확인 
           exec:
             command: ["mysqladmin","-p$MYSQL_ROOT_PASSWORD","ping"]
           initialDelaySeconds: 60
           timeoutSeconds: 10
-  volumeClaimTemplates:     ## 볼륨 요구 템플릿
+  volumeClaimTemplates:               ## 볼륨 요구 템플릿
   - metadata:
       name: pvc
     spec:                   
       accessModes: [ "ReadWriteOnce" ]
       # 환경에 맞게 선택하여, sotrage의 값을 편집
-      #storageClassName: ibmc-file-bronze   # 용량 20Gi IKS
-      #storageClassName: gluster-heketi     # 용량 12Gi GlusterFS
-      storageClassName: standard            # 용량 2Gi  Minikube/GKE
+      storageClassName: standard            
       resources:
         requests:
           storage: 2Gi
