@@ -45,7 +45,7 @@
 |2차|12/04|각 오브젝트 매니페스트 파일 작성 및 DB 초기 설정| [🔗2주차 회고록 링크](https://yuejeong.tistory.com/49?category=683948) |
 |3차|12/09|인그레스를 통한 백엔드 ↔️ 프론트엔드 통신 성공|[🔗3주차 회고록 링크](https://yuejeong.tistory.com/52)|
 |4차|12/10|서버 다운 에러 해결 및 시크릿 오브젝트 적용|[🔗4주차 회고록 링크](https://yuejeong.tistory.com/54)|
-
+|5차|12/20|실시간 채팅 및 소켓 통신 연결 에러 해결|[🔗5주차 회고록 링크](https://yuejeong.tistory.com/58)|
 <br></br>
 
 
