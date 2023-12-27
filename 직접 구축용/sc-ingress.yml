@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sc-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/websocket-services: sc-backend-service:5000   
+spec:
+  ingressClassName: nginx                       # ingress-nginx-controaller 명시
+  rules:
+    - host: sc-chatting.com              # SC통신 직접 구축용 로컬 도메인 네임
+      http:
+        paths:
+          - path: "/api"                        # api request를 백엔드 서비스로 매핑하도록
+            pathType: Prefix
+            backend:
+              service:
+                name: sc-backend-service        # 백엔드 서비스의 도메인 네임
+                port:
+                  number: 5000                  # 백엔드 서비스의 포트 번호 5000
+          - path: "/socket.io"                  # socket.io 백엔드 서비스로 매핑
+            pathType: Prefix
+            backend:
+              service:
+                name: sc-backend-service
+                port:
+                  number: 5000                  # 백엔드 서비스의 포트 번호 5000
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: sc-frontend-service       # 프론트엔드 서비스의 도메인 네임
+                port:
+                  number: 80                    # 프론트엔드 서비스의 포트 번호

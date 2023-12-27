@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc-database-service        ## 이 이름이 k8s내 DNS에 등록됨. 
+  labels:
+    app: db-statefulset
+spec:
+  ports:
+  - port: 3306                     
+    name: sc-database-service
+  clusterIP: None                  ## 헤드리스 서비스 설정
+  selector:
+    app: db-statefulset            ## 스테이트풀셋과 연결시키는 라벨
+---
+
+apiVersion: apps/v1       
+kind: StatefulSet
+metadata:
+  name: sc-database
+spec:                       
+  serviceName: sc-database-service    
+  replicas: 1                       ## 파드 기동 개수
+  selector:
+    matchLabels:
+      app: db-statefulset
+  template:                 
+    metadata:
+      labels:
+        app: db-statefulset
+    spec:
+      containers:           
+      - name: mysql
+        image: youjung819/sc_database:3.0    ## Docker Hub MySQL 리포지터리 지정
+        env:
+          - name: MYSQL_ROOT_PASSWORD # 환경 변수
+            valueFrom:
+              secretKeyRef:
+                name: sc-db-secret    ## 시크릿명
+                key: password         ## 시크릿 키
+        ports:
+        - containerPort: 3306
+          name: sc-database
+        volumeMounts:       
+        - name: pvc
+          mountPath: /var/lib/mysql
+          subPath: data     
+        livenessProbe:                ## MySQL 기동 확인 
+          exec:
+            command: ["mysqladmin","-p$MYSQL_ROOT_PASSWORD","ping"]
+          initialDelaySeconds: 60
+          timeoutSeconds: 10
+  volumeClaimTemplates:               ## 볼륨 요구 템플릿
+  - metadata:
+      name: pvc
+    spec:                   
+      accessModes: [ "ReadWriteOnce" ]
+      # 환경에 맞게 선택하여, sotrage의 값을 편집
+      storageClassName: standard            
+      resources:
+        requests:
+          storage: 2Gi
