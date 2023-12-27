@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc-backend-service              # 백엔드 서비스의 도메인 네임
+  annotations:                         
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "websocket"
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "ws"
+spec:
+  selector:
+    app: sc-backend                     # 백엔드 파드 이름 서비스  라벨에 명시
+  ports:
+    - protocol: TCP
+      port: 5000                        # 백엔드 서비스의 포트 번호 5000
+      targetPort: 3300                  # 백엔드 파드의 포트 번호 3300
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sc-backend
+spec:
+  replicas: 1                           # 웹소켓 오류로 레플리카는 한 개로 배포
+  selector:
+    matchLabels:
+      app: sc-backend
+  template:
+    metadata:
+      labels:
+        app: sc-backend
+    spec:
+      containers:
+        - name: sc-backend
+          image: youjung819/sc_backend:7.5    #도커 허브에 백엔드 컨테이너 이미지
+          imagePullPolicy: Always
+            #command: ["sh", "-c", "sleep 3600"]
+          ports:
+            - containerPort: 3300       # 백엔드 서비스의 TargetPort와 일치시키기
