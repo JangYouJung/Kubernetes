@@ -10,16 +10,11 @@
 ### ⚠️배포가 중단 됐다면 ➡️ SC통신 직접 구축해보기: [실행 매뉴얼📜](https://drive.google.com/file/d/13BAqIp1dmt9J0WI8vv3EnX0P7kXFZKf-/view?usp=sharing)
 <br></br>
 
-## ⚓배포할 서비스 설명
-![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/d5f3c607-a055-4a77-a488-2edf3e5b5b99)
-<br></br>
-
 ## 🔗배포할 서비스 Source
  ### 💬Backend: [github.com/ash0814/SC_backend](https://github.com/ash0814/SC_backend)
  ### 💬Frontend: [github.com/ash0814/SC_frontend](https://github.com/ash0814/SC_frontend)
 ### 🧑‍💻서비스 개발자: [안세현 Github Profile](https://github.com/ash0814)
 <br></br>
-
 
 ## ⚓ SC통신 클러스터 구성도
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/9ad6be51-1b65-4346-85e4-b39e72fc970d)
@@ -27,6 +22,10 @@
 
 ## ⚓ SC통신 Ingress 통신 원리
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/e07a37a4-f667-4f9e-8b81-361b0528021d)
+<br></br>
+
+## ⚓배포할 서비스 설명
+![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/d5f3c607-a055-4a77-a488-2edf3e5b5b99)
 <br></br>
 
 ## ⚓도커 이미지 및 도커 허브 링크
