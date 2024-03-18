@@ -9,7 +9,7 @@
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/d8852402-031a-4416-8275-270aa58541d7)
 ### ⚠️배포가 중단 됐다면 ➡️ SC통신 직접 구축해보기: [실행 매뉴얼📜](https://drive.google.com/file/d/13BAqIp1dmt9J0WI8vv3EnX0P7kXFZKf-/view?usp=sharing)
 <br></br>
-
+ 
 ## 🔗배포할 서비스 Source
  ### 💬Backend: [github.com/ash0814/SC_backend](https://github.com/ash0814/SC_backend)
  ### 💬Frontend: [github.com/ash0814/SC_frontend](https://github.com/ash0814/SC_frontend)
