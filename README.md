@@ -4,7 +4,7 @@
 ### 🌏 팀원 Profile: [🧑‍💻장유정](https://github.com/JangYouJung) & [🧑‍💻안세현](https://github.com/ash0814)
 ### 🔗데모 영상 보러가기: [📽️ YouTube / SC통신 데모영상](https://youtu.be/csPEkX2gCxs)
 <br></br>   
-                  
+                   
 ## [⚓SC통신 사이트 접속하기](http://sc-chatting.ddns.net)
 ![image](https://github.com/JangYouJung/Kubernetes/assets/80906691/d8852402-031a-4416-8275-270aa58541d7)
 ### ⚠️배포가 중단 됐다면 ➡️ SC통신 직접 구축해보기: [실행 매뉴얼📜](https://drive.google.com/file/d/13BAqIp1dmt9J0WI8vv3EnX0P7kXFZKf-/view?usp=sharing)
